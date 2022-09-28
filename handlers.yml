@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: installing httpd into hosts
+      yum: 
+        name: httpd
+        state: installed
+      notify: start httpd service
+
+
+  handlers:
+     - name: start httpd service
+       action: service name=httpd state=started
+

@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: installing pkg for debian 
+      command: apt-get install apache2 -y
+      when: ansible_os_family == "Debian"
+
+    - name: installing pkg for redhat
+      command: yum install httpd -y
+      when: ansible_os_family == "RedHat"

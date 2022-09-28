@@ -1,0 +1,6 @@
+--- #this is my demo file
+
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh

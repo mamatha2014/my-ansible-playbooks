@@ -1,0 +1,10 @@
+--- #creating directory
+- hosts: all
+  become: yes
+  user: ansible
+
+  tasks:
+    - name: creating a dir
+      file:
+        path: /home/ansible/dir1
+        state: directory

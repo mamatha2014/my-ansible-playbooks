@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+   - name: install pkg into hosts
+     yum:
+       name: docker
+       state: latest

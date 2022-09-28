@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+     - name: deleting a dir
+       file:
+         path: /home/ansible/dir1
+         state: absent

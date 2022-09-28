@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: copying file to hosts
+      copy:
+        src: /home/ansible/samplefile
+        dest: /home/ansible

@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+   - name: delete  pkg into hosts
+     yum:
+       name: docker
+       state: absent

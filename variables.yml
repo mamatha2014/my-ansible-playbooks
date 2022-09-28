@@ -1,0 +1,10 @@
+--- #my variable section
+- hosts: all
+  become: yes
+
+  vars:
+    pkgname: tree
+
+  tasks:
+    - name: instaliing tree s/w
+      action: yum name='{{pkgname}}' state=present

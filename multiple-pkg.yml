@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: install pakg
+      yum:
+        name: ['git','which','wget','httpd','tree']
+        state: installed
+
+

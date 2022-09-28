@@ -1,0 +1,10 @@
+--- 
+- hosts: all
+  become: yes
+  user: ansible
+
+  tasks:
+   - name: creating afile
+     file: 
+       path: /home/ansible/demofile
+       state: touch
